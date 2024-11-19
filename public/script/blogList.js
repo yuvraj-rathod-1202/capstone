@@ -16,7 +16,7 @@ if (savedPhotos.length === savedBlogTitles.length && savedBlogTitles.length === 
                         ${savedBlogTitles[i]}
                     </a>
                     <br>
-                    <a class="text-black">${savedBlogDescription[i].substring(0, 20)}</a>
+                    <a class="text-black">${savedBlogDescription[i].substring(0, 200)}</a>
                     <br>
                     <button class="bg-green-400 hover:bg-green-600 text-white font-bold py-2 px-4 border border-blue-700 rounded" onclick="showFullBlog('${savedBlogTitles[i]}')">
                         Read more ->
