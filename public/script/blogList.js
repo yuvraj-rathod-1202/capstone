@@ -12,11 +12,15 @@ if (savedBlogTitles.length > 0) {
             <div class="flex border-double border-4 border-gray-300">
                 <img src="${savedPhotos[i]}" class="size-1/4">
                 <span class="p-6 ml-6">
-                    <button class="text-blue-500 font-medium text-2xl" onclick="showFullBlog(this)" id="${savedBlogTitles[i]}">
+                    <a class="text-blue-500 font-medium text-2xl" onclick="showFullBlog(this)" id="${savedBlogTitles[i]}">
                         ${savedBlogTitles[i]}
-                    </button>
+                    </a>
                     <br>
                     <a class="text-black">${savedBlogDescription[i].substring(0, 20)}</a>
+                    <br>
+                <button class="bg-green-400 hover:bg-green-600 text-white font-bold py-2 px-4 border border-blue-700 rounded" >
+                    Read more ->
+                </button>
                 </span>
             </div>
             `;
@@ -27,5 +31,6 @@ if (savedBlogTitles.length > 0) {
 
 function showFullBlog(buttonEl) {
     const blogTitle = buttonEl.id;
-    console.log(`Blog Title: ${blogTitle}`); // Handle further logic here
+    // console.log(`Blog Title: ${blogTitle}`);
+    
 }
