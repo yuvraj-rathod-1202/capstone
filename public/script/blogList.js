@@ -7,22 +7,22 @@ if (savedPhotos.length === savedBlogTitles.length && savedBlogTitles.length === 
     for (let i = 0; i < savedBlogTitles.length; i++) {
         if (savedPhotos[i] && savedBlogTitles[i] && savedBlogDescription[i]) {
             blogHTML += `
-            <div class="flex border-double border-4 border-gray-300">
-                <img src="${savedPhotos[i]}" class="size-1/4">
-                <span class="p-6 ml-6">
-                    <a class="text-blue-500 font-medium text-2xl" 
-                        
-                       id="${savedBlogTitles[i].replace(/\s+/g, "-")}">
-                        ${savedBlogTitles[i]}
-                    </a>
-                    <br>
-                    <a class="text-black">${savedBlogDescription[i].substring(0, 200)}</a>
-                    <br>
-                    <button class="bg-green-400 hover:bg-green-600 text-white font-bold py-2 px-4 border border-blue-700 rounded" onclick="showFullBlog('${savedBlogTitles[i]}')">
-                        Read more ->
-                    </button>
-                </span>
-            </div>
+            <div class="flex flex-col md:flex-row border-double border-4 border-gray-300 p-4 gap-4 md:gap-6">
+            <img src="${savedPhotos[i]}" class="w-full md:w-1/4 object-cover">
+            <span class="flex flex-col justify-between">
+                <a class="text-blue-500 font-medium text-lg md:text-2xl">
+                    ${savedBlogTitles[i]}
+                </a>
+                <p class="text-black text-sm md:text-base mt-2">
+                    ${savedBlogDescription[i].substring(0, 200)}
+                </p>
+                <button
+                    class="bg-green-400 hover:bg-green-600 text-white font-bold py-2 px-4 mt-4 md:mt-6 border border-blue-700 rounded"
+                    onclick="showFullBlog(${savedBlogTitles[i]})">
+                    Read more ->
+                </button>
+            </span>
+        </div>
             `;
         }
     }
