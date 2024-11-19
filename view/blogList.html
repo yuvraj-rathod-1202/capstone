@@ -119,34 +119,33 @@
             </div>
         </div>
     </nav>
-    <div id="blogListDiv">
-        <div class="ml-36 mt-1.5 mr-36">
-            <div class="flex border-double border-4 border-gray-300">
-                <img src="../assets/blog1.png" class="size-1/4">
-                <span class="p-6 ml-6">
-                    <a class="text-blue-500 font-medium text-2xl">Ryan Robinson’s Blog, ryrob</a>
-                    <br>
-                    <a class="text-black">Today, my personal blog (here) reaches an audience of 500,000+ monthly readers
-                        on
-                        topics related to blogging, marketing, SEO, writing, business and freelancing.</a>
-                    <br>
-                    <button
-                        class="bg-green-400 hover:bg-green-600 text-white font-bold py-2 px-4 border border-blue-700 rounded"
-                        onclick="showFullBlog('Ryan-Robinsons-Blog,-ryrob')">
-                        Read more ->
-                    </button>
-
-                </span>
-            </div>
-
+    <div id="blogListDiv" class="p-4">
+        <!-- Blog Card -->
+        <div class="flex flex-col md:flex-row border-double border-4 border-gray-300 p-4 gap-4 md:gap-6">
+            <img src="../assets/blog1.png" class="w-full md:w-1/4 object-cover">
+            <span class="flex flex-col justify-between">
+                <a class="text-blue-500 font-medium text-lg md:text-2xl">
+                    Ryan Robinson’s Blog, ryrob
+                </a>
+                <p class="text-black text-sm md:text-base mt-2">
+                    Today, my personal blog (here) reaches an audience of 500,000+ monthly readers on
+                    topics related to blogging, marketing, SEO, writing, business, and freelancing.
+                </p>
+                <button
+                    class="bg-green-400 hover:bg-green-600 text-white font-bold py-2 px-4 mt-4 md:mt-6 border border-blue-700 rounded"
+                    onclick="showFullBlog('Ryan-Robinsons-Blog,-ryrob')">
+                    Read more ->
+                </button>
+            </span>
         </div>
-        <div class="ml-36 mt-16 mr-36" id="blogList">
-
-        </div>
+    
+        <!-- Empty Section for Additional Blogs -->
+        <div class="mt-8 md:mt-16" id="blogList"></div>
     </div>
-    <div id="singleBlogData" style="display: none;">
-        
-    </div>
+    
+    <!-- Hidden Blog Section -->
+    <div id="singleBlogData" style="display: none;"></div>
+    
     <script src="../public/script/blogList.js"></script>
 </body>
 
