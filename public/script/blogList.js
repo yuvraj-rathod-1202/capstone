@@ -10,7 +10,7 @@ if (savedPhotos.length === savedBlogTitles.length && savedBlogTitles.length === 
             <div class="flex flex-col md:flex-row border-double border-4 border-gray-300 p-4 gap-4 md:gap-6">
             <img src="${savedPhotos[i]}" class="w-full md:w-1/4 object-cover">
             <span class="flex flex-col justify-between">
-                <a class="text-blue-500 font-medium text-lg md:text-2xl">
+                <a class="text-red-600 font-medium text-lg md:text-2xl">
                     ${savedBlogTitles[i]}
                 </a>
                 <p class="text-black text-sm md:text-base mt-2">
@@ -18,7 +18,7 @@ if (savedPhotos.length === savedBlogTitles.length && savedBlogTitles.length === 
                 </p>
                 <button
                     class="bg-green-400 hover:bg-green-600 text-white font-bold py-2 px-4 mt-4 md:mt-6 border border-blue-700 rounded"
-                    onclick="showFullBlog(${savedBlogTitles[i]})">
+                    onclick="showFullBlog('${savedBlogTitles[i]}')">
                     Read more ->
                 </button>
             </span>
@@ -45,7 +45,7 @@ function showFullBlog(blogTitle) {
             </button>
         </div>
         <div class="flex justify-center">
-            <img src="../assets/blog1.png" class="size-1/2">
+            <img src="../assets/blog1.png" class="size-1/3">
         </div>
         <div class="flex m-auto size-1/2">
             Today, my personal blog (here) reaches an audience of 500,000+ monthly readers
@@ -76,7 +76,7 @@ function showFullBlog(blogTitle) {
         
         </div>
         <div class="flex justify-center">
-            <img src="${savedPhotos[i]}" class="size-1/2">
+            <img src="${savedPhotos[i]}" class="size-1/3">
         </div>
         <div class="flex m-auto size-1/2">
             ${savedBlogDescription[i]}
